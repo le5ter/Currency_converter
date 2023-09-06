@@ -25,6 +25,9 @@ def exchange(request):
         converted_amount = round((currencies[to_curr] / currencies[from_curr]) * float(from_amount), 2)
 
         context = {
+            'from_curr': from_curr,
+            'to_curr': to_curr,
+            'from_amount': from_amount,
             'currencies': currencies,
             'converted_amount': converted_amount,
         }
